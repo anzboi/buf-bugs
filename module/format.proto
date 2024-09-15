@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+import "google/api/annotations.proto";
+
+package module;
+
+service Service {
+    rpc Method(Message) returns (Message) {
+        option (google.api.http) = {
+            additional_bindings: [], // This comment will get deleted
+            additional_bindings: [] // This comment is safe
+            additional_bindings: [], /* this one is not */
+            body: "*", // but this one is
+        };
+    }
+}
+
+message Message {}

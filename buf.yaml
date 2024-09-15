@@ -1,0 +1,8 @@
+version: v2
+
+modules:
+- path: module
+  name: buf.build/anzboi/buf-bugs
+
+deps:
+  - buf.build/googleapis/googleapis
